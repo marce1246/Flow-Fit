@@ -1,3 +1,10 @@
+$primary-color: #007bff;
+$hover-color: #0056b3;
+$background-light: rgba(255, 255, 255, 0.8);
+$font-color: #000;
+$font-main: Arial, sans-serif;
+$max-mobile: 430px;
+
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +16,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  font-family: Arial, sans-serif;
-  color: #000;
+  font-family: $font-main;
+  color: $font-color;
 }
 
 img {
@@ -19,44 +26,20 @@ img {
 }
 
 main {
+  text-align: center;
+  padding: 30px;
+
   img {
-    width: 200px;
+    width: 80%;
+    max-width: 600px;
     height: auto;
-    display: block;
-    margin: 20px;
-  }
-}
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
-ul {
-  li {
-    list-style: none;
-
-    a {
-      text-decoration: none;
-      color: black;
-
-      &:hover {
-        color: blue;
-        text-decoration: underline;
-      }
+    @media (max-width: $max-mobile) {
+      width: 100%;
     }
-  }
-}
-
-.contenedor {
-  display: grid;
-  grid-template-columns: 500px 500px 500px;
-  grid-template-rows: auto;
-  gap: 10px;
-  padding: 10px;
-
-  div {
-    border: 2px solid;
-    border-radius: 4px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.6);
-    flex: 1 1 200px;
-    text-align: center;
   }
 }
 
@@ -65,15 +48,21 @@ nav {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     padding: 10px;
-    background-color: transparent;
+
+    @media (max-width: $max-mobile) {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 0;
+    }
 
     li {
       a {
         display: inline-block;
         padding: 10px 20px;
-        background-color: #007bff;
+        background-color: $primary-color;
         color: white;
         text-decoration: none;
         border-radius: 5px;
@@ -81,11 +70,16 @@ nav {
         transition: background-color 0.3s ease;
 
         &:hover {
-          background-color: #0056b3;
+          background-color: $hover-color;
         }
 
         &.active {
-          background-color: #0056b3;
+          background-color: $hover-color;
+        }
+
+        @media (max-width: $max-mobile) {
+          width: 100%;
+          text-align: center;
         }
       }
     }
@@ -97,8 +91,14 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: $background-light;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: $max-mobile) {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
 }
 
 .logo {
@@ -128,81 +128,36 @@ nav {
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-}
 
-// === SECCIÓN TIENDA ===
-.tienda {
-  main {
-    text-align: center;
-    padding: 30px;
-
-    img {
-      width: 80%;
-      max-width: 600px;
-      height: auto;
-      margin-top: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-  }
-}
-
-@media (max-width: 430px) {
-  .header {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-    padding: 10px 15px;
-  }
-
-  .logo {
-    width: 100px;
-    height: auto;
-  }
-
-  h1 {
-    font-size: 24px;
-    margin-top: 10px;
-  }
-
-  nav {
-    ul {
-      flex-direction: column;
-      align-items: center;
-      gap: 8px;
-      padding: 0;
-
-      li {
-        a {
-          width: 100%;
-          text-align: center;
-          padding: 10px 0;
-        }
-      }
-    }
-  }
-
-  .galeria {
-    flex-direction: column;
-    align-items: center;
-
-    img,
-    video {
+    @media (max-width: $max-mobile) {
       width: 100%;
       height: auto;
     }
   }
 
-  .contenedor {
-    grid-template-columns: 1fr;
+  @media (max-width: $max-mobile) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: 500px 500px 500px;
+  grid-template-rows: auto;
+  gap: 10px;
+  padding: 10px;
+
+  div {
+    border: 2px solid;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    flex: 1 1 200px;
+    text-align: center;
   }
 
-  .tienda {
-    main {
-      img {
-        width: 100%;
-      }
-    }
+  @media (max-width: $max-mobile) {
+    grid-template-columns: 1fr;
   }
 }

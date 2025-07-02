@@ -251,4 +251,41 @@ main img {
     width: 100%;
   }
 }
+.tienda main {
+  text-align: center;
+  padding: 30px;
+}
+
+.tienda main h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.tienda main section {
+  display: flex;
+  justify-content: center;
+}
+
+.tienda main section img {
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 425px) {
+  .tienda main {
+    padding: 20px;
+  }
+
+  .tienda main h2 {
+    font-size: 1.5rem;
+  }
+
+  .tienda main section img {
+    width: 100%;
+  }
+}
 

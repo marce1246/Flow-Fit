@@ -251,7 +251,8 @@ main img {
     width: 100%;
   }
 }
-.tienda main {
+
+.tienda {
   text-align: center;
   padding: 30px;
 }

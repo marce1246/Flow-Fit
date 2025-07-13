@@ -260,7 +260,7 @@ main img {
 .tienda main h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #007bff;
+  color: #ff37001a;
 }
 
 .tienda main section {
@@ -288,4 +288,18 @@ main img {
   .tienda main section img {
     width: 100%;
   }
+}
+.producto-fila {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.producto-fila img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }

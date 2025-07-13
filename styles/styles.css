@@ -301,5 +301,13 @@ main img {
   width: 200px;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(232, 225, 223, 0.914);
+}
+.tienda main {
+  color: white;
+}
+
+.tienda h2 {
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }

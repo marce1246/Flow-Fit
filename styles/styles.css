@@ -186,8 +186,22 @@ img {
     width: 100%;
   }
 }
+.bigger{
+  margin: 0 250px;
+  height: 50vh;
+  width: auto;
+}
 
 .bigger:hover{
     animation: bigger 4s ease-in;
     animation-fill-mode: forwards;
+}
+
+@keyframes bigger{
+  0%{
+    scale: 1;
+  }
+  100%{
+    scale: 1.5;
+  }
 }

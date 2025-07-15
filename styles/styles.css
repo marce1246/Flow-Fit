@@ -191,11 +191,3 @@ img {
     animation: bigger 4s ease-in;
     animation-fill-mode: forwards;
 }
-@keyframes .bigger:hover{
-  0%{
-      scale: 1;
-  }
-  100%{
-    scale: 1.5;
-  }
-}

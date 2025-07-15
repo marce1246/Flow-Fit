@@ -99,10 +99,10 @@ img {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  margin-bottom: 30px;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 30px;
 }
-
 .galeria img,
 .galeria video {
   width: 300px;
@@ -184,5 +184,18 @@ img {
 
   .producto-fila img {
     width: 100%;
+  }
+}
+
+.bigger:hover{
+    animation: bigger 4s ease-in;
+    animation-fill-mode: forwards;
+}
+@keyframes .bigger:hover{
+  0%{
+      scale: 1;
+  }
+  100%{
+    scale: 1.5;
   }
 }

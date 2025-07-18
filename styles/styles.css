@@ -193,7 +193,7 @@ img {
 }
 
 .bigger:hover{
-    animation: bigger 4s ease-in;
+    animation: bigger 2s ease-in;
     animation-fill-mode: forwards;
 }
 

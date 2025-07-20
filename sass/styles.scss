@@ -20,131 +20,46 @@ body {
   color: $font-color;
 }
 
-img {
-  width: 150px;
-  height: fit-content;
+img, video {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 main {
   text-align: center;
   padding: 30px;
 
-  img {
-    width: 80%;
-    max-width: 600px;
-    height: auto;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
-    @media (max-width: $max-mobile) {
-      width: 100%;
-    }
-  }
-}
-
-nav {
-  ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 10px;
-
-    @media (max-width: $max-mobile) {
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      padding: 0;
-    }
-
-    li {
-      a {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: $primary-color;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-          background-color: $hover-color;
-        }
-
-        &.active {
-          background-color: $hover-color;
-        }
-
-        @media (max-width: $max-mobile) {
-          width: 100%;
-          text-align: center;
-        }
-      }
-    }
-  }
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background-color: $background-light;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
   @media (max-width: $max-mobile) {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
+    padding: 20px;
   }
-}
-
-.logo {
-  width: 100px;
-  height: auto;
-}
-
-.mini-video {
-  width: 150px;
-  display: block;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .galeria {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
   padding: 20px;
 
-  img,
-  video {
+  img, video {
     width: 300px;
     height: 200px;
     object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
     @media (max-width: $max-mobile) {
       width: 100%;
       height: auto;
     }
   }
-
-  @media (max-width: $max-mobile) {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
 .contenedor {
   display: grid;
-  grid-template-columns: 500px 500px 500px;
-  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 10px;
   padding: 10px;
 
@@ -153,48 +68,105 @@ nav {
     border-radius: 4px;
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.6);
-    flex: 1 1 200px;
     text-align: center;
+  }
+}
+
+.tienda main {
+  text-align: center;
+  padding: 30px;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: $primary-color;
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 80%;
+      max-width: 600px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
   }
 
   @media (max-width: $max-mobile) {
-    grid-template-columns: 1fr;
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    section img {
+      width: 100%;
+    }
   }
 }
-.tienda {
-  main {
-    text-align: center;
-    padding: 30px;
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: $primary-color;
+nav {
+  background: $primary-color;
+  padding: 10px;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 5px 0;
+      border-radius: 2px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+
+    li a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: $primary-color;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+
+      &:hover,
+      &.active {
+        background-color: $hover-color;
+      }
+    }
+  }
+
+  @media (max-width: $max-mobile) {
+    .menu-icon {
+      display: block;
     }
 
-    section {
-      display: flex;
-      justify-content: center;
-
-      img {
-        width: 80%;
-        max-width: 600px;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-      }
+    ul {
+      flex-direction: column;
+      align-items: center;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
     }
 
-    @media (max-width: $max-mobile) {
-      padding: 20px;
-
-      h2 {
-        font-size: 1.5rem;
-      }
-
-      section img {
-        width: 100%;
-      }
+    input[type="checkbox"]:checked ~ ul {
+      max-height: 500px;
     }
   }
 }

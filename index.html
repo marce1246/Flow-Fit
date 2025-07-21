@@ -3,39 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flow Fit</title>
-  <link rel="stylesheet" href="styles/styles.css" />
-  <link rel="stylesheet" href="../FLOW-FIT/asset/Logo-ketbele.jpg" type="image/x-icon" id="Logo-ketbele">
+  <title>Flow Fit - Tienda</title>
+  <link rel="shortcut icon" href="../asset/Logo-ketbele.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/style.css" /> <!-- Asegurate que el path sea correcto -->
 </head>
 <body>
-  <nav>
-    <input type="checkbox" id="toggle-menu" />
-    <label for="toggle-menu" class="menu-icon">
-      <span></span>
-      <span></span>
-      <span></span>
-    </label>
-    <ul>
-      <li><a href="index.html" class="active">Inicio</a></li>
-      <li><a href="pages/nosotros.html">Nosotros</a></li>
-      <li><a href="pages/contacto.html">Contacto</a></li>
-      <li><a href="pages/tienda.html">Tienda</a></li>
-      <li>
-        <a href="./index.html#logo">Logo-ketbele</a>
-      </li>
-    </ul>
-  </nav>
+  <header class="header">
+    <img src="../asset/Logo-ketbele.jpg" alt="Logo Flow Fit" class="logo" />
+    <nav>
+      <ul>
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="tienda.html" class="active">Tienda</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <main>
-    <h1>Bienvenido a Flow Fit</h1>
-    <p>Tu espacio para el entrenamiento, la biomecánica y el bienestar.</p>
-
-    <section class="galeria">
-      <img src="asset/barra-olimpica.jpeg" alt="Ejercicio 1" />
-      <img src="asset/barras.jpg" alt="Ejercicio 2" />
-      <video>
-        <source src="asset/video-gym.mp4" type="video/mp4" muted autoplay loop controls />
-      </video>
+    <h2>Tenemos todo para que llegues a tu objetivo</h2>
+    <section>
+      <img src="../asset/Lugar-gym.jpg" alt="Lugar-gym" />
     </section>
   </main>
 </body>

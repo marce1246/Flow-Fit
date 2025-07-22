@@ -90,7 +90,9 @@ ul li {
 }
 
 img {
+  max-width: 100%;
   height: auto;
+  display: block;
 }
 
 /* Galería y contenedores */
@@ -114,10 +116,9 @@ img {
 
 .contenedor {
   display: grid;
-  grid-template-columns: 500px 500px 500px;
-  grid-template-rows: auto;
-  gap: 10px;
-  padding: 10px;
+  grid-template-columns: repeat(auto-fit, minmax (250px, 1fr));
+  gap: 20px;
+  padding: 20px;
 }
 
 .contenedor div {
@@ -187,14 +188,15 @@ img {
   }
 }
 .bigger{
-  margin: 0 250px;
-  height: 50vh;
-  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
 }
 
 .bigger:hover{
-    animation: bigger 2s ease-in;
-    animation-fill-mode: forwards;
+  transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
 }
 
 @keyframes bigger{

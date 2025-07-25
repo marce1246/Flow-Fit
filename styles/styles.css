@@ -281,3 +281,7 @@ figcaption:hover{
 .menu-toggle {
   display: none;
 }
+.frases-motivadoras .row {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
